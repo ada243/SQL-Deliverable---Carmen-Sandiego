@@ -71,7 +71,7 @@ SELECT * FROM city LEFT JOIN country ON city.countrycode = country.code WHERE co
 
 --below was my first try and I think I like it but I realized that its not the best asnwer because it does not say the country. The only reason I knew the country is because I am brazilian so I know the countrycode BRA is for Brazil. Can you join more than two tables together?
 
-carmen=# SELECT * FROM city LEFT JOIN countrylanguage ON city.countrycode = countrylanguage.countrycode WHERE language = 'Italian' AND name LIKE 'Serra%';
+SELECT * FROM city LEFT JOIN countrylanguage ON city.countrycode = countrylanguage.countrycode WHERE language = 'Italian' AND name LIKE 'Serra%';
 --   id  |    name    | countrycode |     district      | population | countrycode | language | isofficial | percentage 
 -- ------+------------+-------------+-------------------+------------+-------------+----------+------------+------------
 --   265 | Serra      | BRA         | Espï¿½rito Santo  |     302666 | BRA         | Italian  | f          |        0.4
@@ -81,7 +81,7 @@ carmen=# SELECT * FROM city LEFT JOIN countrylanguage ON city.countrycode = coun
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll follow right behind you!
 
-carmen=# SELECT * FROM citY WHERE id = 211;
+SELECT * FROM citY WHERE id = 211;
 --  id  |    name    | countrycode |     district     | population 
 -- -----+------------+-------------+------------------+------------
 --  211 | Brasï¿½lia | BRA         | Distrito Federal |    1969868
@@ -101,7 +101,7 @@ carmen=# SELECT * FROM citY WHERE id = 211;
 
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
-carmen=# SELECT * FROM citY WHERE population = 91084;
+SELECT * FROM citY WHERE population = 91084;
 --   id  |     name     | countrycode |  district  | population 
 -- ------+--------------+-------------+------------+------------
 --  4060 | Santa Monica | USA         | California |      91084
